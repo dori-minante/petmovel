@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PetMóvel: banho e tosa em domicílio para cães e gatos.">
+  <meta name="description" content="PetMóvel: banho e tosa em domicílio para cães e gatos na cidade de São Paulo.">
 
-  <title>PetMóvel | Banho e tosa em domicílio</title>
+  <title>PetMóvel | Banho e tosa em domicílio em São Paulo</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -28,13 +28,20 @@
         <span class="logo-pet">Pet</span><span class="logo-movel">Móvel</span>
       </a>
 
-      <nav class="menu">
+      <nav class="menu" id="menu-principal">
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#depoimentos">Depoimentos</a>
         <a href="#contato">Contato</a>
+        <a class="menu-agendar" href="#contato">Agendar agora</a>
       </nav>
+
+      <button class="menu-toggle" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <button class="botao botao-cabecalho" id="botao-cabecalho" type="button">Agendar agora</button>
 
@@ -47,7 +54,14 @@
       <div class="container hero-conteudo">
 
         <div class="hero-texto">
-          <p class="etiqueta">Banho e tosa em domicílio para cães e gatos</p>
+          <div class="hero-informacoes">
+            <p class="etiqueta">Banho e tosa em domicílio para cães e gatos</p>
+
+            <p class="local-atendimento">
+              <span class="local-icone" aria-hidden="true"></span>
+              Atendimento na cidade de São Paulo
+            </p>
+          </div>
 
           <h1>Cuidado e carinho sem seu pet sair de casa</h1>
 
@@ -80,7 +94,7 @@
 
           <div>
             <strong>Atendimento em domicílio</strong>
-            <p>Vamos até você.</p>
+            <p>Vamos até você na cidade de São Paulo.</p>
           </div>
         </div>
 
@@ -127,7 +141,7 @@
 
           <article class="servico-card">
             <div class="servico-imagem">
-              <img src="images/servico-banho.jpg" alt="Cachorro durante o banho">
+              <img class="imagem-banho" src="images/servico-banho.jpg" alt="Cachorro durante o banho">
             </div>
 
             <div class="servico-conteudo">
@@ -428,9 +442,17 @@
         <p>Banho e tosa em domicílio para cães e gatos.</p>
 
         <div class="redes-sociais">
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">WhatsApp</a>
+          <button class="rede-social" type="button" aria-label="Instagram" title="Instagram">
+            <img src="images/icone-instagram.png" alt="">
+          </button>
+
+          <button class="rede-social" type="button" aria-label="Facebook" title="Facebook">
+            <img src="images/icone-facebook.png" alt="">
+          </button>
+
+          <button class="rede-social" type="button" aria-label="WhatsApp" title="WhatsApp">
+            <img src="images/icone-whatsapp.png" alt="">
+          </button>
         </div>
       </div>
 
