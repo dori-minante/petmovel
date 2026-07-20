@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PetMóvel: banho e tosa em domicílio para o seu pet.">
+  <meta name="description" content="PetMóvel: banho e tosa em domicílio para cães e gatos na cidade de São Paulo.">
 
-  <title>PetMóvel | Banho e tosa em domicílio</title>
+  <title>PetMóvel | Banho e tosa em domicílio em São Paulo</title>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,47 +16,113 @@
   <header class="cabecalho">
     <div class="container cabecalho-conteudo">
 
-      <a class="logo" href="#inicio">PetMóvel</a>
+      <a class="logo" href="#inicio" aria-label="PetMóvel - Início">
+        <svg class="logo-pata" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="16" cy="18" r="7"></circle>
+          <circle cx="30" cy="12" r="7"></circle>
+          <circle cx="45" cy="15" r="7"></circle>
+          <circle cx="55" cy="30" r="7"></circle>
+          <ellipse cx="31" cy="40" rx="17" ry="14"></ellipse>
+        </svg>
 
-      <nav class="menu">
+        <span class="logo-pet">Pet</span><span class="logo-movel">Móvel</span>
+      </a>
+
+      <nav class="menu" id="menu-principal">
         <a href="#inicio">Início</a>
         <a href="#servicos">Serviços</a>
         <a href="#como-funciona">Como funciona</a>
-        <a href="#sobre">Sobre</a>
+        <a href="#depoimentos">Depoimentos</a>
         <a href="#contato">Contato</a>
+        <a class="menu-agendar" href="#contato">Agendar agora</a>
       </nav>
 
-      <button class="botao botao-cabecalho" id="botao-cabecalho" type="button">
-        Agendar
+      <button class="menu-toggle" id="botao-menu" type="button" aria-label="Abrir menu" aria-controls="menu-principal" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+
+      <button class="botao botao-cabecalho" id="botao-cabecalho" type="button">Agendar agora</button>
 
     </div>
   </header>
 
   <main>
 
-    <section class="banner" id="inicio">
-      <div class="container banner-conteudo">
+    <section class="hero" id="inicio">
+      <div class="container hero-conteudo">
 
-        <div class="banner-texto">
-          <p class="destaque">Banho e tosa em domicílio</p>
+        <div class="hero-texto">
+          <div class="hero-informacoes">
+            <p class="etiqueta">Banho e tosa em domicílio para cães e gatos</p>
+
+            <p class="local-atendimento">
+              <span class="local-icone" aria-hidden="true"></span>
+              Atendimento na cidade de São Paulo
+            </p>
+          </div>
 
           <h1>Cuidado e carinho sem seu pet sair de casa</h1>
 
-          <p class="banner-descricao">
+          <p class="hero-descricao">
             Mais conforto, menos estresse e todo o cuidado que seu melhor amigo merece.
           </p>
 
-          <button class="botao" id="botao-agendar" type="button">
-            Agendar atendimento
-          </button>
+          <div class="hero-botoes">
+            <button class="botao" id="botao-agendar" type="button">Agendar atendimento</button>
+
+            <a class="botao-secundario" href="#como-funciona">
+              <span class="icone-play">▶</span>
+              Como funciona
+            </a>
+          </div>
         </div>
 
-        <div class="banner-imagem">
-          <img
-            src="images/hero-pet.jpg"
-            alt="Cachorro recebendo cuidados de banho e tosa"
-          >
+        <div class="hero-imagem">
+          <img src="images/hero-pet.jpg" alt="Cachorro recebendo banho e cuidados">
+        </div>
+
+      </div>
+    </section>
+
+    <section class="beneficios" id="beneficios">
+      <div class="container beneficios-faixa">
+
+        <div class="beneficio">
+          <span class="beneficio-icone">⌂</span>
+
+          <div>
+            <strong>Atendimento em domicílio</strong>
+            <p>Vamos até você na cidade de São Paulo.</p>
+          </div>
+        </div>
+
+        <div class="beneficio">
+          <span class="beneficio-icone">✓</span>
+
+          <div>
+            <strong>Profissionais qualificados</strong>
+            <p>Cuidado e experiência.</p>
+          </div>
+        </div>
+
+        <div class="beneficio">
+          <span class="beneficio-icone">◇</span>
+
+          <div>
+            <strong>Produtos premium</strong>
+            <p>Seguros para o seu pet.</p>
+          </div>
+        </div>
+
+        <div class="beneficio">
+          <span class="beneficio-icone">♡</span>
+
+          <div>
+            <strong>Seu pet mais tranquilo</strong>
+            <p>Menos deslocamento e estresse.</p>
+          </div>
         </div>
 
       </div>
@@ -65,53 +131,55 @@
     <section class="servicos secao" id="servicos">
       <div class="container">
 
-        <div class="secao-titulo">
-          <p class="destaque">Nossos serviços</p>
+        <div class="titulo-secao">
+          <p>Nossos serviços</p>
           <h2>Tudo que seu pet precisa</h2>
-
-          <p>
-            Atendimento cuidadoso, produtos de qualidade e muito carinho em cada etapa.
-          </p>
+          <span></span>
         </div>
 
         <div class="lista-servicos">
 
-          <article class="cartao-servico">
-            <img src="images/servico-banho.jpg" alt="Cachorro tomando banho">
+          <article class="servico-card">
+            <div class="servico-imagem">
+              <img class="imagem-banho" src="images/servico-banho.jpg" alt="Cachorro durante o banho">
+            </div>
 
-            <div class="cartao-conteudo">
-              <h3>Banho completo</h3>
-
-              <p>
-                Higienização, secagem, limpeza das orelhas e cuidado especial com a pelagem.
-              </p>
+            <div class="servico-conteudo">
+              <h3>Banho</h3>
+              <p>Banho completo com produtos de qualidade e muito carinho.</p>
             </div>
           </article>
 
-          <article class="cartao-servico">
-            <img src="images/servico-tosa.jpg" alt="Cachorro recebendo tosa">
+          <article class="servico-card">
+            <div class="servico-imagem">
+              <img src="images/servico-tosa.jpg" alt="Cachorro recebendo tosa">
+            </div>
 
-            <div class="cartao-conteudo">
-              <h3>Tosa personalizada</h3>
-
-              <p>
-                Tosa higiênica ou completa, respeitando o estilo e as necessidades do seu pet.
-              </p>
+            <div class="servico-conteudo">
+              <h3>Tosa</h3>
+              <p>Tosa higiênica ou completa, respeitando o estilo do seu pet.</p>
             </div>
           </article>
 
-          <article class="cartao-servico">
-            <img
-              src="images/servico-hidratacao.jpg"
-              alt="Cachorro com a pelagem hidratada"
-            >
+          <article class="servico-card">
+            <div class="servico-imagem">
+              <img src="images/servico-hidratacao.jpg" alt="Cachorro recebendo hidratação">
+            </div>
 
-            <div class="cartao-conteudo">
+            <div class="servico-conteudo">
               <h3>Hidratação</h3>
+              <p>Tratamento para uma pelagem mais macia, saudável e brilhante.</p>
+            </div>
+          </article>
 
-              <p>
-                Tratamento para deixar a pelagem mais macia, saudável e brilhante.
-              </p>
+          <article class="servico-card">
+            <div class="servico-imagem">
+              <img src="images/servico-cuidados.jpg" alt="Gato recebendo cuidados especiais">
+            </div>
+
+            <div class="servico-conteudo">
+              <h3>Cuidados especiais</h3>
+              <p>Limpeza de ouvidos, corte de unhas e atenção para cães e gatos.</p>
             </div>
           </article>
 
@@ -119,250 +187,234 @@
       </div>
     </section>
 
-    <section class="como-funciona secao" id="como-funciona">
+    <section class="depoimentos secao" id="depoimentos">
       <div class="container">
 
-        <div class="secao-titulo">
-          <p class="destaque">É simples e rápido</p>
-          <h2>Como funciona</h2>
+        <div class="titulo-secao">
+          <p>Quem já recebeu nossos cuidados</p>
+          <h2>Depoimentos dos clientes</h2>
+          <span></span>
         </div>
 
-        <div class="lista-etapas">
+        <div class="carrossel-depoimentos">
 
-          <article class="etapa">
-            <span>1</span>
-            <h3>Faça seu agendamento</h3>
+          <button class="carrossel-botao" id="depoimento-anterior" type="button" aria-label="Mostrar depoimento anterior">‹</button>
 
-            <p>
-              Preencha o formulário com seus dados e o endereço do atendimento.
-            </p>
-          </article>
+          <div class="depoimentos-lista">
 
-          <article class="etapa">
-            <span>2</span>
-            <h3>Nós vamos até você</h3>
+            <article class="depoimento-item ativo">
+              <div class="depoimento-foto">
+                <img src="images/depoimento-camila-nino.png" alt="Camila com seu gato Nino">
+              </div>
 
-            <p>
-              Nossa unidade móvel chega no horário combinado e preparada para receber seu pet.
-            </p>
-          </article>
+              <div class="depoimento-texto">
+                <p class="estrelas">★★★★★</p>
 
-          <article class="etapa">
-            <span>3</span>
-            <h3>Seu pet fica renovado</h3>
+                <blockquote>
+                  “O Nino sempre ficava muito nervoso com deslocamentos. Com o atendimento em casa, tudo foi muito mais tranquilo.”
+                </blockquote>
 
-            <p>
-              Você acompanha tudo de perto e recebe seu pet limpo, cheiroso e feliz.
-            </p>
-          </article>
+                <strong>Camila e Nino</strong>
+                <span>Atendimento para gato</span>
+              </div>
+            </article>
 
+            <article class="depoimento-item">
+              <div class="depoimento-foto">
+                <img src="images/depoimento-rafael-bento.png" alt="Rafael com seu cachorro Bento">
+              </div>
+
+              <div class="depoimento-texto">
+                <p class="estrelas">★★★★★</p>
+
+                <blockquote>
+                  “O Bento adorou o atendimento. A equipe foi pontual, cuidadosa e deixou tudo muito organizado.”
+                </blockquote>
+
+                <strong>Rafael e Bento</strong>
+                <span>Atendimento para cachorro</span>
+              </div>
+            </article>
+
+            <article class="depoimento-item">
+              <div class="depoimento-foto">
+                <img src="images/depoimento-beatriz-mel.png" alt="Beatriz com sua cachorra Mel">
+              </div>
+
+              <div class="depoimento-texto">
+                <p class="estrelas">★★★★★</p>
+
+                <blockquote>
+                  “A Mel ficou limpa, cheirosa e muito mais tranquila do que nos atendimentos fora de casa.”
+                </blockquote>
+
+                <strong>Beatriz e Mel</strong>
+                <span>Atendimento para cachorra</span>
+              </div>
+            </article>
+
+            <article class="depoimento-item">
+              <div class="depoimento-foto">
+                <img src="images/depoimento-andre-lua.png" alt="André com sua gata Lua">
+              </div>
+
+              <div class="depoimento-texto">
+                <p class="estrelas">★★★★★</p>
+
+                <blockquote>
+                  “A Lua recebeu todo o cuidado que precisava sem sair do ambiente onde se sente segura.”
+                </blockquote>
+
+                <strong>André e Lua</strong>
+                <span>Atendimento para gata</span>
+              </div>
+            </article>
+
+          </div>
+
+          <button class="carrossel-botao" id="depoimento-proximo" type="button" aria-label="Mostrar próximo depoimento">›</button>
+
+        </div>
+
+        <div class="carrossel-indicadores">
+          <button class="indicador ativo" type="button" data-indice="0" aria-label="Mostrar depoimento de Camila e Nino"></button>
+          <button class="indicador" type="button" data-indice="1" aria-label="Mostrar depoimento de Rafael e Bento"></button>
+          <button class="indicador" type="button" data-indice="2" aria-label="Mostrar depoimento de Beatriz e Mel"></button>
+          <button class="indicador" type="button" data-indice="3" aria-label="Mostrar depoimento de André e Lua"></button>
         </div>
       </div>
     </section>
 
-    <section class="sobre secao" id="sobre">
-      <div class="container sobre-conteudo">
+    <section class="como-contato secao" id="como-funciona">
+      <div class="container como-contato-grid">
 
-        <div class="sobre-imagem">
-          <img
-            src="images/van-petmovel.jpg"
-            alt="Unidade móvel fictícia do PetMóvel"
-          >
-        </div>
-
-        <div class="sobre-texto">
-          <p class="destaque">Conforto para você e seu pet</p>
-
-          <h2>Por que escolher o PetMóvel?</h2>
-
-          <p>
-            O PetMóvel é um serviço fictício de banho e tosa que leva uma estrutura completa
-            até a casa do cliente.
-          </p>
-
-          <p>
-            Nosso objetivo é diminuir o estresse do deslocamento e oferecer uma experiência
-            segura, tranquila e personalizada.
-          </p>
-
-          <ul>
-            <li>Atendimento com horário marcado.</li>
-            <li>Menos estresse para o animal.</li>
-            <li>Produtos adequados para cada tipo de pelagem.</li>
-            <li>Serviço realizado próximo à sua casa.</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="depoimento secao">
-      <div class="container">
-
-        <div class="depoimento-conteudo">
-          <p>
-            “A experiência foi muito tranquila. O atendimento aconteceu no horário
-            e minha cachorrinha ficou cheirosa e muito calma.”
-          </p>
-
-          <strong>Marina e Mel</strong>
-          <span>Cliente fictícia do PetMóvel</span>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="contato secao" id="contato">
-      <div class="container contato-conteudo">
-
-        <div class="contato-texto">
-          <p class="destaque">Agende um atendimento</p>
-
-          <h2>Vamos cuidar do seu melhor amigo?</h2>
-
-          <p>
-            Preencha o formulário. Ao digitar seu CEP, consultaremos automaticamente
-            seu endereço.
-          </p>
-
-          <div class="informacao-contato">
-            <h3>Horário de atendimento</h3>
-            <p>Segunda a sábado, das 8h às 18h.</p>
+        <div class="como-card">
+          <div class="como-cabecalho">
+            <span class="pata-titulo">●</span>
+            <h2>Como funciona?</h2>
           </div>
 
-          <div class="informacao-contato">
-            <h3>Contato</h3>
-            <p>contato@petmovel.com.br</p>
+          <p class="como-descricao">
+            O PetMóvel leva uma estrutura de banho e tosa até a sua casa para atender
+            cães e gatos com mais conforto.
+          </p>
+
+          <div class="como-conteudo">
+
+            <div class="lista-etapas">
+
+              <div class="etapa">
+                <span class="numero-etapa">1</span>
+
+                <div>
+                  <h3>Agende</h3>
+                  <p>Escolha o melhor dia e horário pelo formulário.</p>
+                </div>
+              </div>
+
+              <div class="etapa">
+                <span class="numero-etapa">2</span>
+
+                <div>
+                  <h3>Vamos até você</h3>
+                  <p>Nossa equipe chega com tudo que é necessário.</p>
+                </div>
+              </div>
+
+              <div class="etapa">
+                <span class="numero-etapa">3</span>
+
+                <div>
+                  <h3>Seu pet feliz</h3>
+                  <p>Cuidamos do seu pet com atenção e carinho.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="van-bloco">
+              <img src="images/van-petmovel.jpg" alt="Van PetMóvel para atendimento em domicílio">
+
+              <p>Atendimento para cães e gatos</p>
+            </div>
+
           </div>
         </div>
 
-        <form class="formulario" id="formulario-contato">
+        <form class="formulario-card" id="formulario-contato">
 
-          <div class="campo campo-completo">
-            <label for="nome">Nome</label>
-
-            <input
-              id="nome"
-              name="nome"
-              type="text"
-              placeholder="Digite seu nome"
-              required
-            >
+          <div class="formulario-titulo" id="contato">
+            <span>●</span>
+            <h2>Agende agora</h2>
           </div>
 
-          <div class="campo">
-            <label for="email">E-mail</label>
+          <div class="formulario-grid">
 
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="seuemail@exemplo.com"
-              required
-            >
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+            </div>
+
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-9999">
+            </div>
+
+            <div class="campo">
+              <label for="tipo-pet">Seu pet</label>
+
+              <select id="tipo-pet" name="tipo-pet" required>
+                <option value="">Selecione</option>
+                <option value="cao">Cão</option>
+                <option value="gato">Gato</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="cep">CEP</label>
+              <input id="cep" name="cep" type="text" placeholder="00000-000" maxlength="9" required>
+            </div>
+
+            <div class="campo">
+              <label for="bairro">Bairro</label>
+              <input id="bairro" name="bairro" type="text" placeholder="Preenchido pelo CEP" readonly>
+            </div>
+
+            <div class="campo campo-rua">
+              <label for="rua">Rua</label>
+              <input id="rua" name="rua" type="text" placeholder="Preenchida pelo CEP" readonly>
+            </div>
+
+            <div class="campo">
+              <label for="numero">Número</label>
+              <input id="numero" name="numero" type="text" placeholder="Número" required>
+            </div>
+
+            <div class="campo">
+              <label for="cidade">Cidade</label>
+              <input id="cidade" name="cidade" type="text" placeholder="Preenchida pelo CEP" readonly>
+            </div>
+
+            <div class="campo">
+              <label for="estado">Estado</label>
+              <input id="estado" name="estado" type="text" placeholder="UF" readonly>
+            </div>
+
+            <div class="campo campo-completo">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre seu pet e o serviço desejado" required></textarea>
+            </div>
+
           </div>
 
-          <div class="campo">
-            <label for="telefone">Telefone</label>
+          <button class="botao formulario-botao" type="submit">Enviar agendamento</button>
 
-            <input
-              id="telefone"
-              name="telefone"
-              type="tel"
-              placeholder="(11) 99999-9999"
-            >
-          </div>
-
-          <div class="campo">
-            <label for="cep">CEP</label>
-
-            <input
-              id="cep"
-              name="cep"
-              type="text"
-              placeholder="00000-000"
-              maxlength="9"
-              required
-            >
-          </div>
-
-          <div class="campo">
-            <label for="numero">Número</label>
-
-            <input
-              id="numero"
-              name="numero"
-              type="text"
-              placeholder="123"
-              required
-            >
-          </div>
-
-          <div class="campo campo-completo">
-            <label for="rua">Rua</label>
-
-            <input
-              id="rua"
-              name="rua"
-              type="text"
-              placeholder="Preenchida pelo CEP"
-              readonly
-            >
-          </div>
-
-          <div class="campo">
-            <label for="bairro">Bairro</label>
-
-            <input
-              id="bairro"
-              name="bairro"
-              type="text"
-              placeholder="Preenchido pelo CEP"
-              readonly
-            >
-          </div>
-
-          <div class="campo">
-            <label for="cidade">Cidade</label>
-
-            <input
-              id="cidade"
-              name="cidade"
-              type="text"
-              placeholder="Preenchida pelo CEP"
-              readonly
-            >
-          </div>
-
-          <div class="campo">
-            <label for="estado">Estado</label>
-
-            <input
-              id="estado"
-              name="estado"
-              type="text"
-              placeholder="UF"
-              readonly
-            >
-          </div>
-
-          <div class="campo campo-completo">
-            <label for="mensagem">Mensagem</label>
-
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              rows="5"
-              placeholder="Conte um pouco sobre seu pet e o serviço desejado"
-              required
-            ></textarea>
-          </div>
-
-          <div class="campo-completo">
-            <button class="botao" type="submit">Enviar solicitação</button>
-
-            <p class="mensagem-formulario" id="mensagem-formulario"></p>
-          </div>
+          <p class="mensagem-formulario" id="mensagem-formulario"></p>
 
         </form>
 
@@ -372,15 +424,65 @@
   </main>
 
   <footer class="rodape">
-    <div class="container rodape-conteudo">
+    <div class="container rodape-grid">
 
-      <div>
-        <strong>PetMóvel</strong>
-        <p>Banho e tosa em domicílio.</p>
+      <div class="rodape-marca">
+        <a class="logo logo-rodape" href="#inicio">
+          <svg class="logo-pata" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="16" cy="18" r="7"></circle>
+            <circle cx="30" cy="12" r="7"></circle>
+            <circle cx="45" cy="15" r="7"></circle>
+            <circle cx="55" cy="30" r="7"></circle>
+            <ellipse cx="31" cy="40" rx="17" ry="14"></ellipse>
+          </svg>
+
+          <span class="logo-pet">Pet</span><span class="logo-movel">Móvel</span>
+        </a>
+
+        <p>Banho e tosa em domicílio para cães e gatos.</p>
+
+        <div class="redes-sociais">
+          <button class="rede-social" type="button" aria-label="Instagram" title="Instagram">
+            <img src="images/icone-instagram.png" alt="">
+          </button>
+
+          <button class="rede-social" type="button" aria-label="Facebook" title="Facebook">
+            <img src="images/icone-facebook.png" alt="">
+          </button>
+
+          <button class="rede-social" type="button" aria-label="WhatsApp" title="WhatsApp">
+            <img src="images/icone-whatsapp.png" alt="">
+          </button>
+        </div>
       </div>
 
-      <p>Desenvolvido por Dori - 2026</p>
+      <div class="rodape-coluna">
+        <h3>Links rápidos</h3>
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#contato">Contato</a>
+      </div>
 
+      <div class="rodape-coluna">
+        <h3>Contato</h3>
+        <p>(11) 99999-9999</p>
+        <p>contato@petmovel.com.br</p>
+        <p>São Paulo - SP</p>
+      </div>
+
+      <div class="rodape-coluna">
+        <h3>Horário de atendimento</h3>
+        <p>Segunda a sábado: 8h às 18h</p>
+        <p>Domingos e feriados: 8h às 12h</p>
+
+        <button class="botao botao-rodape" id="botao-rodape" type="button">Agendar agora</button>
+      </div>
+
+    </div>
+
+    <div class="container direitos">
+      <p>© 2026 PetMóvel. Projeto desenvolvido por Dori.</p>
     </div>
   </footer>
 
